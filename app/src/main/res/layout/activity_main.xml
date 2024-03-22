@@ -11,219 +11,339 @@
 
     <View
         android:id="@+id/view5"
-        android:layout_width="390dp"
-        android:layout_height="138dp"
+        android:layout_width="387dp"
+        android:layout_height="148dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="11dp"
         android:background="#6E70E4"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="482dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
 
     <EditText
         android:id="@+id/editTextTextPassword9"
         android:layout_width="276dp"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginEnd="31dp"
         android:backgroundTint="#000000"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="517dp" />
+        android:hint="@string/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword10" />
 
     <Button
         android:id="@+id/button14"
         android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="572dp" />
+        android:layout_height="48dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginEnd="150dp"
+        android:text="@string/edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
 
     <Button
         android:id="@+id/button15"
         android:layout_width="94dp"
-        android:layout_height="37dp"
-        android:text="Delete"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="572dp" />
+        android:layout_height="48dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginEnd="45dp"
+        android:text="@string/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
 
     <EditText
         android:id="@+id/editTextTextPassword10"
         android:layout_width="276dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="31dp"
         android:backgroundTint="#000000"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="482dp" />
+        android:hint="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="71dp"
         android:layout_height="76dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="489dp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginEnd="320dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
     <View
         android:id="@+id/view3"
-        android:layout_width="390dp"
-        android:layout_height="138dp"
+        android:layout_width="384dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="11dp"
         android:background="#6E70E4"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="333dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <EditText
         android:id="@+id/editTextTextPassword5"
         android:layout_width="276dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="31dp"
         android:backgroundTint="#000000"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="333dp" />
+        android:hint="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
 
     <EditText
         android:id="@+id/editTextTextPassword6"
         android:layout_width="276dp"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginEnd="31dp"
         android:backgroundTint="#000000"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="368dp" />
+        android:hint="@string/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword5" />
 
     <Button
         android:id="@+id/button10"
         android:layout_width="94dp"
-        android:layout_height="37dp"
-        android:text="Delete"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="423dp" />
+        android:layout_height="48dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toTopOf="@+id/view5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button11"
         android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="423dp" />
+        android:layout_height="48dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="148dp"
+        android:text="@string/edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword6" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="71dp"
         android:layout_height="76dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="340dp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="364dp"
+        android:layout_marginEnd="320dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
     <View
         android:id="@+id/view2"
-        android:layout_width="390dp"
-        android:layout_height="138dp"
+        android:layout_width="393dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
         android:background="#6E70E4"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="181dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <EditText
         android:id="@+id/editTextTextPassword3"
         android:layout_width="276dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#000000"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="181dp" />
+        android:hint="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <EditText
         android:id="@+id/editTextTextPassword4"
         android:layout_width="276dp"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#000000"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="216dp" />
+        android:hint="@string/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="94dp"
-        android:layout_height="37dp"
-        android:text="Delete"
-        tools:layout_editor_absoluteX="271dp"
-        tools:layout_editor_absoluteY="271dp" />
+        android:layout_height="48dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="46dp"
+        android:text="@string/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword4" />
 
     <Button
         android:id="@+id/button9"
         android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="271dp" />
+        android:layout_height="48dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword4" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="71dp"
         android:layout_height="76dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="188dp" />
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="321dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
     <View
         android:id="@+id/view"
-        android:layout_width="390dp"
-        android:layout_height="138dp"
+        android:layout_width="393dp"
+        android:layout_height="149dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="12dp"
         android:background="#6E70E4"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="27dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="71dp"
         android:layout_height="76dp"
-        app:srcCompat="@drawable/ic_launcher_background"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="34dp" />
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="320dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="276dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#000000"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="27dp" />
+        android:hint="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
         android:layout_width="276dp"
-        android:layout_height="44dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#000000"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="62dp" />
+        android:hint="@string/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="94dp"
-        android:layout_height="37dp"
-        android:text="Delete"
-        tools:layout_editor_absoluteX="271dp"
-        tools:layout_editor_absoluteY="117dp" />
+        android:layout_height="48dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="46dp"
+        android:text="@string/delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button6"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="125dp"
-        android:layout_height="40dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="117dp" />
+        android:layout_height="48dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:clickable="true"
-        app:srcCompat="@android:drawable/btn_star_big_on"
-        tools:layout_editor_absoluteX="339dp"
-        tools:layout_editor_absoluteY="659dp" />
+        android:contentDescription="new password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
