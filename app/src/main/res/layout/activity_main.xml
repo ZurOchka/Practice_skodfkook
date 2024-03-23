@@ -326,6 +326,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:clickable="true"
+        android:onClick="add"
         android:contentDescription="new password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
