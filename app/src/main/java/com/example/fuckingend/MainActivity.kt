@@ -47,6 +47,8 @@ class MainActivity : AppCompatActivity() {
             img1.isVisible = false
             login1.isVisible = false
             pass1.isVisible = false
+            login1.text = null
+            pass1.text = null
         }
         del2.setOnClickListener{
             del2.isVisible = false
@@ -55,6 +57,8 @@ class MainActivity : AppCompatActivity() {
             img2.isVisible = false
             login2.isVisible = false
             pass2.isVisible = false
+            login2.text = null
+            pass2.text = null
         }
         del3.setOnClickListener {
             del3.isVisible = false
@@ -63,6 +67,8 @@ class MainActivity : AppCompatActivity() {
             img3.isVisible = false
             login3.isVisible = false
             pass3.isVisible = false
+            login3.text = null
+            pass3.text = null
         }
         del4.setOnClickListener {
             del4.isVisible = false
@@ -71,6 +77,8 @@ class MainActivity : AppCompatActivity() {
             img4.isVisible = false
             login4.isVisible = false
             pass4.isVisible = false
+            login4.text = null
+            pass4.text = null
         }
     }
     fun add(view: View){
