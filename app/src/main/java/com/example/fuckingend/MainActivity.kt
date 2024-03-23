@@ -7,6 +7,20 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.view.isVisible
+import kotlin.random.Random
+
+
+/*TODO: ЕСЛИ КТО-ТО ЧТО-ЛИБО ДЕЛАЕТ ХОТЯ БЫ ЧТО-НИБУДЬ ИЗ ПРОПИСАННОГО СНИЗУ СПИСКА (ПРИОРИТЕТ СВЕРХУ ВНИЗ)
+Для оптимизации кода вызывать одну и ту же функцию при нажатии разных кнопок, но с пониманием того какая кнопка жмется
+Сохранение паролей и логинов в файл
+Чтение из файла
+Копирование пароля в буфер обмена
+Скрытие и показ пароля при нажатии на текст
+Выпадающий список картинок с картинками сервисов, для которых сохраняется пароль
+Если останется время то можно реализовать шифрование паролей в файл и их дешифрование.
+*/
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         val pass3 : TextView = findViewById(R.id.pass3)
         val pass4 : TextView = findViewById(R.id.pass4)
 
+        //Удаление (скрытие) паролей
         del1.setOnClickListener{
             del1.isVisible = false
             ed1.isVisible = false
@@ -81,6 +96,8 @@ class MainActivity : AppCompatActivity() {
             pass4.text = null
         }
     }
+
+    //Добавление (раскрытие) элементов паролей
     fun add(view: View){
         val del1 : Button = findViewById(R.id.del1)
         val del2 : Button = findViewById(R.id.del2)
@@ -137,6 +154,46 @@ class MainActivity : AppCompatActivity() {
             img4.isVisible = true
             login4.isVisible = true
             pass4.isVisible = true
+        }
+    }
+
+    //dataclass для того чтобы можно было загенить пароль
+    data class PasswordGeneratorOptions(
+        val length: Int,
+        val includeUppercase: Boolean,
+        val includeLowercase: Boolean,
+        val includeDigits: Boolean,
+        val includeSpecialChars: Boolean
+    )
+    //непосредственно сам генератор паролей
+    fun pswGen(view: View, options: PasswordGeneratorOptions, pswNumber: Int){
+        val pass1 : TextView = findViewById(R.id.pass1)
+        val pass2 : TextView = findViewById(R.id.pass2)
+        val pass3 : TextView = findViewById(R.id.pass3)
+        val pass4 : TextView = findViewById(R.id.pass4)
+        //список символов для пароля, список можно менять, мб сделать чтобы можно было выбрать типы символов но пока так
+        var charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#$%&*()-_=+<>?:"
+        var password = (1..options.length)
+            .map { Random.nextInt(charSet.length) }
+            .map(charSet::get)
+            .joinToString("")
+        //тут пока что чисто заглушка для того как можно будет определять кнопка какого из паролей была нажата,
+        //мы же не хотим конкретно говнокодить и делать четыре одинаковых генератора паролей
+        if (pswNumber == 1)
+        {
+            pass1.text = password
+        }
+        else if (pswNumber == 2)
+        {
+            pass2.text = password
+        }
+        else if (pswNumber == 3)
+        {
+            pass3.text = password
+        }
+        else
+        {
+            pass4.text = password
         }
     }
 }
