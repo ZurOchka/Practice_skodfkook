@@ -221,6 +221,5 @@ class MainActivity : AppCompatActivity() {
         {
             pass4.text = password
         }
-
     }
 }
