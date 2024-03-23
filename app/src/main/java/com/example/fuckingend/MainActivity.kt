@@ -123,6 +123,7 @@ class MainActivity : AppCompatActivity() {
         val pass2 : TextView = findViewById(R.id.pass2)
         val pass3 : TextView = findViewById(R.id.pass3)
         val pass4 : TextView = findViewById(R.id.pass4)
+
         if (del1.isVisible == false){
             del1.isVisible = true
             ed1.isVisible = true
@@ -165,18 +166,43 @@ class MainActivity : AppCompatActivity() {
         val includeDigits: Boolean,
         val includeSpecialChars: Boolean
     )
+
     //непосредственно сам генератор паролей
-    fun pswGen(view: View, options: PasswordGeneratorOptions, pswNumber: Int){
+    fun generatePassword(options: PasswordGeneratorOptions): String {
+        val uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        val lowercaseLetters = "abcdefghijklmnopqrstuvwxyz"
+        val digits = "0123456789"
+        val specialChars = "#$%&*()-_=+<>?:"
+
+        var charSet = ""
+        if (options.includeUppercase) charSet += uppercaseLetters
+        if (options.includeLowercase) charSet += lowercaseLetters
+        if (options.includeDigits) charSet += digits
+        if (options.includeSpecialChars) charSet += specialChars
+
+        require(charSet.isNotEmpty()) { "Должен быть выбран хотя бы один из пунктов" }
+
+        return (1..options.length)
+            .map { Random.nextInt(charSet.length) }
+            .map(charSet::get)
+            .joinToString("")
+    }
+
+    //немного костыльный метод вывода пароля, но зато можно настроить непосредственно вид пароля
+    fun pswGenerator(pswNumber: Int){
+        val passwordOptions = PasswordGeneratorOptions(
+            length = 15,
+            includeUppercase = true,
+            includeLowercase = true,
+            includeDigits = true,
+            includeSpecialChars = true
+        )
         val pass1 : TextView = findViewById(R.id.pass1)
         val pass2 : TextView = findViewById(R.id.pass2)
         val pass3 : TextView = findViewById(R.id.pass3)
         val pass4 : TextView = findViewById(R.id.pass4)
-        //список символов для пароля, список можно менять, мб сделать чтобы можно было выбрать типы символов но пока так
-        var charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#$%&*()-_=+<>?:"
-        var password = (1..options.length)
-            .map { Random.nextInt(charSet.length) }
-            .map(charSet::get)
-            .joinToString("")
+
+        val password = generatePassword(passwordOptions)
         //тут пока что чисто заглушка для того как можно будет определять кнопка какого из паролей была нажата,
         //мы же не хотим конкретно говнокодить и делать четыре одинаковых генератора паролей
         if (pswNumber == 1)
@@ -195,5 +221,6 @@ class MainActivity : AppCompatActivity() {
         {
             pass4.text = password
         }
+
     }
 }

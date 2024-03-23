@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Fucking end</string>
     <string name="login">Login</string>
-    <string name="password">password</string>
+    <string name="password">Password</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
 </resources>

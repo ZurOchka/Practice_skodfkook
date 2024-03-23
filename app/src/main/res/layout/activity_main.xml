@@ -11,8 +11,8 @@
 
     <View
         android:id="@+id/v4"
-        android:layout_width="392dp"
-        android:layout_height="152dp"
+        android:layout_width="0dp"
+        android:layout_height="155dp"
         android:layout_marginStart="9dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="12dp"
@@ -26,14 +26,15 @@
         android:id="@+id/pass4"
         android:layout_width="276dp"
         android:layout_height="48dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginEnd="31dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="25dp"
         android:backgroundTint="#000000"
         android:ems="10"
-        android:inputType="textPassword"
         android:hint="@string/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/v4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/img4"
         app:layout_constraintTop_toBottomOf="@+id/login4" />
 
     <Button
@@ -41,56 +42,51 @@
         android:layout_width="125dp"
         android:layout_height="48dp"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="-50dp"
-        android:layout_marginEnd="150dp"
         android:text="@string/edit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/v4" />
+        app:layout_constraintStart_toStartOf="@id/v4"
+        app:layout_constraintTop_toBottomOf="@id/pass4" />
 
     <Button
         android:id="@+id/del4"
         android:layout_width="94dp"
         android:layout_height="48dp"
-        android:layout_marginStart="272dp"
-        android:layout_marginTop="-50dp"
-        android:layout_marginEnd="45dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="36dp"
         android:text="@string/delete"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/v4" />
+        app:layout_constraintEnd_toEndOf="@id/v4"
+        app:layout_constraintStart_toEndOf="@id/ed4"
+        app:layout_constraintTop_toBottomOf="@id/pass4" />
 
     <EditText
         android:id="@+id/login4"
         android:layout_width="276dp"
         android:layout_height="48dp"
-        android:layout_marginStart="104dp"
+        android:layout_marginStart="11dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="31dp"
+        android:layout_marginEnd="25dp"
         android:backgroundTint="#000000"
         android:ems="10"
-        android:inputType="textPassword"
         android:hint="@string/login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/v3" />
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/v4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/img4"
+        app:layout_constraintTop_toTopOf="@id/v4" />
 
     <ImageView
         android:id="@+id/img4"
         android:layout_width="71dp"
         android:layout_height="76dp"
+        android:layout_marginStart="13dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="320dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/v4"
         app:layout_constraintTop_toTopOf="@+id/v4"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <View
         android:id="@+id/v3"
-        android:layout_width="392dp"
-        android:layout_height="152dp"
+        android:layout_width="0dp"
+        android:layout_height="155dp"
         android:layout_marginStart="9dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="12dp"
@@ -104,73 +100,67 @@
         android:id="@+id/login3"
         android:layout_width="276dp"
         android:layout_height="48dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="31dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="25dp"
         android:backgroundTint="#000000"
         android:ems="10"
-        android:inputType="textPassword"
         android:hint="@string/login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/v2" />
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/v3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/img3"
+        app:layout_constraintTop_toTopOf="@id/v3" />
 
     <EditText
         android:id="@+id/pass3"
         android:layout_width="276dp"
         android:layout_height="48dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginEnd="31dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="25dp"
         android:backgroundTint="#000000"
         android:ems="10"
-        android:inputType="textPassword"
         android:hint="@string/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/v3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/img3"
         app:layout_constraintTop_toBottomOf="@+id/login3" />
 
     <Button
         android:id="@+id/del3"
         android:layout_width="94dp"
         android:layout_height="48dp"
-        android:layout_marginStart="272dp"
-        android:layout_marginTop="-50dp"
-        android:layout_marginEnd="45dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="36dp"
         android:text="@string/delete"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/v3" />
+        app:layout_constraintEnd_toEndOf="@id/v3"
+        app:layout_constraintStart_toEndOf="@id/ed3"
+        app:layout_constraintTop_toBottomOf="@id/pass3" />
 
     <Button
         android:id="@+id/ed3"
         android:layout_width="125dp"
         android:layout_height="48dp"
-        android:layout_marginStart="138dp"
-        android:layout_marginTop="-50dp"
-        android:layout_marginEnd="148dp"
+        android:layout_marginStart="136dp"
         android:text="@string/edit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/v3" />
+        app:layout_constraintStart_toStartOf="@id/v3"
+        app:layout_constraintTop_toBottomOf="@id/pass3" />
 
     <ImageView
         android:id="@+id/img3"
         android:layout_width="71dp"
         android:layout_height="76dp"
+        android:layout_marginStart="13dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="320dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/v3"
         app:layout_constraintTop_toTopOf="@+id/v3"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <View
         android:id="@+id/v2"
-        android:layout_width="392dp"
-        android:layout_height="152dp"
+        android:layout_width="0dp"
+        android:layout_height="155dp"
         android:layout_marginStart="9dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="12dp"
@@ -184,28 +174,28 @@
         android:id="@+id/login2"
         android:layout_width="276dp"
         android:layout_height="48dp"
-        android:layout_marginStart="103dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="25dp"
         android:backgroundTint="#000000"
         android:ems="10"
-        android:inputType="textPassword"
         android:hint="@string/login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/v1" />
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/v2"
+        app:layout_constraintStart_toEndOf="@id/img2"
+        app:layout_constraintTop_toTopOf="@id/v2" />
 
     <EditText
         android:id="@+id/pass2"
         android:layout_width="276dp"
         android:layout_height="48dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="25dp"
         android:backgroundTint="#000000"
         android:ems="10"
-        android:inputType="textPassword"
         android:hint="@string/password"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/v2"
         app:layout_constraintStart_toEndOf="@+id/img2"
         app:layout_constraintTop_toBottomOf="@+id/login2" />
 
@@ -214,10 +204,9 @@
         android:layout_width="94dp"
         android:layout_height="48dp"
         android:layout_marginStart="9dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="46dp"
+        android:layout_marginEnd="36dp"
         android:text="@string/delete"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/v2"
         app:layout_constraintStart_toEndOf="@+id/ed2"
         app:layout_constraintTop_toBottomOf="@+id/pass2" />
 
@@ -226,29 +215,26 @@
         android:layout_width="125dp"
         android:layout_height="48dp"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="4dp"
         android:text="@string/edit"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@id/v2"
         app:layout_constraintTop_toBottomOf="@+id/pass2" />
 
     <ImageView
         android:id="@+id/img2"
         android:layout_width="71dp"
         android:layout_height="76dp"
+        android:layout_marginStart="13dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="321dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/v2"
         app:layout_constraintTop_toTopOf="@+id/v2"
         app:srcCompat="@drawable/ic_launcher_background" />
 
     <View
         android:id="@+id/v1"
-        android:layout_width="392dp"
-        android:layout_height="152dp"
+        android:layout_width="0dp"
+        android:layout_height="155dp"
         android:layout_marginStart="9dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="12dp"
         android:background="#6E70E4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -261,9 +247,6 @@
         android:layout_height="76dp"
         android:layout_marginStart="13dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="320dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/v1"
         app:layout_constraintTop_toTopOf="@+id/v1"
         app:srcCompat="@drawable/ic_launcher_background" />
@@ -272,28 +255,28 @@
         android:id="@+id/login1"
         android:layout_width="276dp"
         android:layout_height="48dp"
-        android:layout_marginStart="103dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="25dp"
         android:backgroundTint="#000000"
         android:ems="10"
-        android:inputType="textPassword"
         android:hint="@string/login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/v1"
+        app:layout_constraintStart_toEndOf="@id/img1"
+        app:layout_constraintTop_toTopOf="@id/v1" />
 
     <EditText
         android:id="@+id/pass1"
         android:layout_width="276dp"
         android:layout_height="48dp"
         android:layout_marginStart="11dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="25dp"
         android:backgroundTint="#000000"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/v1"
         app:layout_constraintStart_toEndOf="@+id/img1"
         app:layout_constraintTop_toBottomOf="@+id/login1" />
 
@@ -302,10 +285,9 @@
         android:layout_width="94dp"
         android:layout_height="48dp"
         android:layout_marginStart="9dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="46dp"
+        android:layout_marginEnd="36dp"
         android:text="@string/delete"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/v1"
         app:layout_constraintStart_toEndOf="@+id/ed1"
         app:layout_constraintTop_toBottomOf="@+id/pass1" />
 
@@ -314,10 +296,9 @@
         android:layout_width="125dp"
         android:layout_height="48dp"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/edit"
         android:onClick="pswGen"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/edit"
+        app:layout_constraintStart_toStartOf="@id/v1"
         app:layout_constraintTop_toBottomOf="@+id/pass1" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
