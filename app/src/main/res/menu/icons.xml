@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/discord"
+        android:title="Discord"/>
+    <item
+        android:id="@+id/github"
+        android:title="Github"/>
+    <item
+        android:id="@+id/google"
+        android:title="Google"/>
+    <item
+        android:id="@+id/microsoft"
+        android:title="Microsoft"/>
+    <item
+        android:id="@+id/steam"
+        android:title="Steam"/>
+    <item
+        android:id="@+id/telegram"
+        android:title="Telegram"/>
+    <item
+        android:id="@+id/vk"
+        android:title="VK"/>
+    <item
+        android:id="@+id/x"
+        android:title="X (Twitter)"/>
+    <item
+        android:id="@+id/yandex"
+        android:title="Yandex"/>
+</menu>

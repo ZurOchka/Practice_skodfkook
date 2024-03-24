@@ -1,9 +1,11 @@
 package com.example.fuckingend
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.view.isVisible
@@ -16,7 +18,6 @@ import kotlin.random.Random
 Чтение из файла
 Копирование пароля в буфер обмена
 Скрытие и показ пароля при нажатии на текст
-Выпадающий список картинок с картинками сервисов, для которых сохраняется пароль
 Если останется время то можно реализовать шифрование паролей в файл и их дешифрование.
 */
 
@@ -53,6 +54,9 @@ class MainActivity : AppCompatActivity() {
         val pass2 : TextView = findViewById(R.id.pass2)
         val pass3 : TextView = findViewById(R.id.pass3)
         val pass4 : TextView = findViewById(R.id.pass4)
+
+        menu()
+
 
         //Удаление (скрытие) паролей
         del1.setOnClickListener{
@@ -189,7 +193,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     //немного костыльный метод вывода пароля, но зато можно настроить непосредственно вид пароля
-    fun pswGenerator(pswNumber: Int){
+    fun pswGenerator(pswNumber: EditText){
         val passwordOptions = PasswordGeneratorOptions(
             length = 15,
             includeUppercase = true,
@@ -203,17 +207,17 @@ class MainActivity : AppCompatActivity() {
         val pass4 : TextView = findViewById(R.id.pass4)
 
         val password = generatePassword(passwordOptions)
-        //тут пока что чисто заглушка для того как можно будет определять кнопка какого из паролей была нажата,
-        //мы же не хотим конкретно говнокодить и делать четыре одинаковых генератора паролей
-        if (pswNumber == 1)
+
+        //теперь не заглушка, пароли генерируются
+        if (pswNumber == pass1)
         {
             pass1.text = password
         }
-        else if (pswNumber == 2)
+        else if (pswNumber == pass2)
         {
             pass2.text = password
         }
-        else if (pswNumber == 3)
+        else if (pswNumber == pass3)
         {
             pass3.text = password
         }
@@ -221,5 +225,112 @@ class MainActivity : AppCompatActivity() {
         {
             pass4.text = password
         }
+    }
+    //Появление меню у каждой кнопки по нажатию на каждую
+    fun menu(){
+        val ed1 : Button = findViewById(R.id.ed1)
+        val ed2 : Button = findViewById(R.id.ed2)
+        val ed3 : Button = findViewById(R.id.ed3)
+        val ed4 : Button = findViewById(R.id.ed4)
+
+        val login1 : EditText = findViewById(R.id.login1)
+        val login2 : EditText = findViewById(R.id.login2)
+        val login3 : EditText = findViewById(R.id.login3)
+        val login4 : EditText = findViewById(R.id.login4)
+
+        val img1 : ImageView = findViewById(R.id.img1)
+        val img2 : ImageView = findViewById(R.id.img2)
+        val img3 : ImageView = findViewById(R.id.img3)
+        val img4 : ImageView = findViewById(R.id.img4)
+
+        val pass1 : EditText = findViewById(R.id.pass1)
+        val pass2 : EditText = findViewById(R.id.pass2)
+        val pass3 : EditText = findViewById(R.id.pass3)
+        val pass4 : EditText = findViewById(R.id.pass4)
+
+        ed1.setOnClickListener {
+            showMenu(b = ed1,e=login1,pass=pass1, image=img1)
+        }
+        ed2.setOnClickListener {
+            showMenu(b = ed2,e=login2,pass=pass2, image=img2)
+        }
+        ed3.setOnClickListener {
+            showMenu(b = ed3,e=login3,pass=pass3, image=img3)
+        }
+        ed4.setOnClickListener {
+            showMenu(b = ed4,e=login4,pass=pass4, image=img4)
+        }
+
+    }
+    //Функция для появления всплывающего меню
+    fun showMenu(b: Button, e: EditText, pass: EditText, image: ImageView){
+        val menu = androidx.appcompat.widget.PopupMenu(this,b)
+        menu.inflate(R.menu.menu)
+        menu.setOnMenuItemClickListener{
+            when(it.itemId){
+                R.id.generate -> {
+                    pswGenerator(pass)
+                    true
+                }
+                R.id.change_icon -> {
+                    showicons(i=image)
+                    true
+                }
+                R.id.login -> {
+                    e.requestFocus()
+                    true
+                }
+                else -> true
+            }
+        }
+        menu.show()
+    }
+    //Появление всплываюшего меню со списком названий иконок при выборе пункта "Сменить иконку"
+    //В зависимости от выбора той или иной иконки она соответственно меняется
+    fun showicons(i: ImageView){
+        val icons = androidx.appcompat.widget.PopupMenu(this,i)
+        icons.inflate(R.menu.icons)
+        icons.setOnMenuItemClickListener {
+            when(it.itemId){
+                R.id.discord -> {
+                    i.setImageDrawable(getDrawable(R.drawable.discord))
+                    true
+                }
+                R.id.github -> {
+                    i.setImageDrawable(getDrawable(R.drawable.github))
+                    true
+                }
+                R.id.google -> {
+                    i.setImageDrawable(getDrawable(R.drawable.google))
+                    true
+                }
+                R.id.microsoft -> {
+                    i.setImageDrawable(getDrawable(R.drawable.microsoft))
+                    true
+                }
+                R.id.steam -> {
+                    i.setImageDrawable(getDrawable(R.drawable.steam))
+                    true
+                }
+                R.id.telegram -> {
+                    i.setImageDrawable(getDrawable(R.drawable.telegram))
+                    true
+                }
+                R.id.vk -> {
+                    i.setImageDrawable(getDrawable(R.drawable.vk))
+                    true
+                }
+                R.id.x -> {
+                    i.setImageDrawable(getDrawable(R.drawable.x))
+                    true
+                }
+                R.id.yandex -> {
+                    i.setImageDrawable(getDrawable(R.drawable.yandex))
+                    true
+                }
+                else -> true
+            }
+        }
+        icons.show()
     }
 }
