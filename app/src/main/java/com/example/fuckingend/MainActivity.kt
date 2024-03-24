@@ -50,13 +50,12 @@ class MainActivity : AppCompatActivity() {
         val login2 : TextView = findViewById(R.id.login2)
         val login3 : TextView = findViewById(R.id.login3)
         val login4 : TextView = findViewById(R.id.login4)
-        val pass1 : TextView = findViewById(R.id.pass1)
+        val pass1 : EditText = findViewById(R.id.pass1)
         val pass2 : TextView = findViewById(R.id.pass2)
         val pass3 : TextView = findViewById(R.id.pass3)
         val pass4 : TextView = findViewById(R.id.pass4)
 
-        menu()
-
+        menu() //Вызов функции всплывающего меню
 
         //Удаление (скрытие) паролей
         del1.setOnClickListener{
