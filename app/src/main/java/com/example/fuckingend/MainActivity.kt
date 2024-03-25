@@ -6,11 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
 import android.view.View
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.core.view.isVisible
 import kotlin.random.Random
 
@@ -75,6 +71,7 @@ class MainActivity : AppCompatActivity() {
             login1.text = null
             pass1.text = null
             check1.isVisible = false
+            check1.isChecked = false
             img1.setImageDrawable(getDrawable(R.drawable.ic_launcher_background))
         }
         del2.setOnClickListener{
@@ -87,6 +84,7 @@ class MainActivity : AppCompatActivity() {
             login2.text = null
             pass2.text = null
             check2.isVisible = false
+            check2.isChecked = false
             img2.setImageDrawable(getDrawable(R.drawable.ic_launcher_background))
         }
         del3.setOnClickListener {
@@ -99,6 +97,7 @@ class MainActivity : AppCompatActivity() {
             login3.text = null
             pass3.text = null
             check3.isVisible = false
+            check3.isChecked = false
             img3.setImageDrawable(getDrawable(R.drawable.ic_launcher_background))
         }
         del4.setOnClickListener {
@@ -111,6 +110,7 @@ class MainActivity : AppCompatActivity() {
             login4.text = null
             pass4.text = null
             check4.isVisible = false
+            check4.isChecked = false
             img4.setImageDrawable(getDrawable(R.drawable.ic_launcher_background))
         }
     }
@@ -181,6 +181,9 @@ class MainActivity : AppCompatActivity() {
             login4.isVisible = true
             pass4.isVisible = true
             check4.isVisible = true
+        }
+        else{
+            Toast.makeText(applicationContext, "Account limit", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -364,6 +367,11 @@ class MainActivity : AppCompatActivity() {
         val pass3 : EditText = findViewById(R.id.pass3)
         val pass4 : EditText = findViewById(R.id.pass4)
 
+        val login1 : EditText = findViewById(R.id.login1)
+        val login2 : EditText = findViewById(R.id.login2)
+        val login3 : EditText = findViewById(R.id.login3)
+        val login4 : EditText = findViewById(R.id.login4)
+
         val check1: CheckBox = findViewById(R.id.check1)
         val check2: CheckBox = findViewById(R.id.check2)
         val check3: CheckBox = findViewById(R.id.check3)
@@ -371,33 +379,41 @@ class MainActivity : AppCompatActivity() {
 
         check1.setOnClickListener {
             if(check1.isChecked){
+                login1.inputType = 1
                 pass1.inputType = 1
             }
             else{
+                login1.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
                 pass1.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
             }
         }
         check2.setOnClickListener {
             if(check2.isChecked){
+                login2.inputType = 1
                 pass2.inputType = 1
             }
             else{
+                login2.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
                 pass2.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
             }
         }
         check3.setOnClickListener {
             if(check3.isChecked){
+                login3.inputType = 1
                 pass3.inputType = 1
             }
             else{
+                login3.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
                 pass3.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
             }
         }
         check4.setOnClickListener {
             if(check4.isChecked){
+                login4.inputType = 1
                 pass4.inputType = 1
             }
             else{
+                login4.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
                 pass4.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
             }
         }
