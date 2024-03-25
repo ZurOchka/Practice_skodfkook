@@ -19,7 +19,6 @@ import kotlin.random.Random
 Сохранение паролей и логинов, номер или название картинки, которая выбрана в файл
 Чтение из файла
 Копирование пароля в буфер обмена
-Скрытие и показ пароля при нажатии на текст
 Если останется время то можно реализовать шифрование паролей в файл и их дешифрование.
 */
 
@@ -56,6 +55,10 @@ class MainActivity : AppCompatActivity() {
         val pass2 : EditText = findViewById(R.id.pass2)
         val pass3 : EditText = findViewById(R.id.pass3)
         val pass4 : EditText = findViewById(R.id.pass4)
+        val check1: CheckBox = findViewById(R.id.check1)
+        val check2: CheckBox = findViewById(R.id.check2)
+        val check3: CheckBox = findViewById(R.id.check3)
+        val check4: CheckBox = findViewById(R.id.check4)
 
         menu() //Вызов функции всплывающего меню
         showpassword()
@@ -70,6 +73,7 @@ class MainActivity : AppCompatActivity() {
             pass1.isVisible = false
             login1.text = null
             pass1.text = null
+            check1.isVisible = false
         }
         del2.setOnClickListener{
             del2.isVisible = false
@@ -80,6 +84,7 @@ class MainActivity : AppCompatActivity() {
             pass2.isVisible = false
             login2.text = null
             pass2.text = null
+            check2.isVisible = false
         }
         del3.setOnClickListener {
             del3.isVisible = false
@@ -90,6 +95,7 @@ class MainActivity : AppCompatActivity() {
             pass3.isVisible = false
             login3.text = null
             pass3.text = null
+            check3.isVisible = false
         }
         del4.setOnClickListener {
             del4.isVisible = false
@@ -100,6 +106,7 @@ class MainActivity : AppCompatActivity() {
             pass4.isVisible = false
             login4.text = null
             pass4.text = null
+            check4.isVisible = false
         }
     }
 
@@ -129,6 +136,10 @@ class MainActivity : AppCompatActivity() {
         val pass2 : TextView = findViewById(R.id.pass2)
         val pass3 : TextView = findViewById(R.id.pass3)
         val pass4 : TextView = findViewById(R.id.pass4)
+        val check1: CheckBox = findViewById(R.id.check1)
+        val check2: CheckBox = findViewById(R.id.check2)
+        val check3: CheckBox = findViewById(R.id.check3)
+        val check4: CheckBox = findViewById(R.id.check4)
 
         if (del1.isVisible == false){
             del1.isVisible = true
@@ -137,6 +148,7 @@ class MainActivity : AppCompatActivity() {
             img1.isVisible = true
             login1.isVisible = true
             pass1.isVisible = true
+            check1.isVisible = true
         }
         else if (del2.isVisible == false){
             del2.isVisible = true
@@ -145,6 +157,7 @@ class MainActivity : AppCompatActivity() {
             img2.isVisible = true
             login2.isVisible = true
             pass2.isVisible = true
+            check2.isVisible = true
         }
         else if (del3.isVisible == false){
             del3.isVisible = true
@@ -153,6 +166,7 @@ class MainActivity : AppCompatActivity() {
             img3.isVisible = true
             login3.isVisible = true
             pass3.isVisible = true
+            check3.isVisible = true
         }
         else if (del4.isVisible == false){
             del4.isVisible = true
@@ -161,6 +175,7 @@ class MainActivity : AppCompatActivity() {
             img4.isVisible = true
             login4.isVisible = true
             pass4.isVisible = true
+            check4.isVisible = true
         }
     }
 
