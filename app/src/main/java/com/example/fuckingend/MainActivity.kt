@@ -1,5 +1,6 @@
 package com.example.fuckingend
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,18 +16,18 @@ import kotlin.random.Random
 
 
 /*TODO: ЕСЛИ КТО-ТО ЧТО-ЛИБО ДЕЛАЕТ ХОТЯ БЫ ЧТО-НИБУДЬ ИЗ ПРОПИСАННОГО СНИЗУ СПИСКА (ПРИОРИТЕТ СВЕРХУ ВНИЗ)
-Для оптимизации кода вызывать одну и ту же функцию при нажатии разных кнопок, но с пониманием того какая кнопка жмется
-Сохранение паролей и логинов, номер или название картинки, которая выбрана в файл
-Чтение из файла
-Копирование пароля в буфер обмена
+Сохранение паролей и логинов, номер или название картинки, которая выбрана в базу данных room https://developer.android.com/training/data-storage/room/
+Чтение из бд и занос информации в соответствующее поле
 Если останется время то можно реализовать шифрование паролей в файл и их дешифрование.
 */
 
 //пупупуупупупупууппупупу
+//пурупурупам параперепабам
 
 class MainActivity : AppCompatActivity() {
 
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -74,6 +75,7 @@ class MainActivity : AppCompatActivity() {
             login1.text = null
             pass1.text = null
             check1.isVisible = false
+            img1.setImageDrawable(getDrawable(R.drawable.ic_launcher_background))
         }
         del2.setOnClickListener{
             del2.isVisible = false
@@ -85,6 +87,7 @@ class MainActivity : AppCompatActivity() {
             login2.text = null
             pass2.text = null
             check2.isVisible = false
+            img2.setImageDrawable(getDrawable(R.drawable.ic_launcher_background))
         }
         del3.setOnClickListener {
             del3.isVisible = false
@@ -96,6 +99,7 @@ class MainActivity : AppCompatActivity() {
             login3.text = null
             pass3.text = null
             check3.isVisible = false
+            img3.setImageDrawable(getDrawable(R.drawable.ic_launcher_background))
         }
         del4.setOnClickListener {
             del4.isVisible = false
@@ -107,6 +111,7 @@ class MainActivity : AppCompatActivity() {
             login4.text = null
             pass4.text = null
             check4.isVisible = false
+            img4.setImageDrawable(getDrawable(R.drawable.ic_launcher_background))
         }
     }
 
