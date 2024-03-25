@@ -22,7 +22,7 @@ import kotlin.random.Random
 Если останется время то можно реализовать шифрование паролей в файл и их дешифрование.
 */
 
-
+//пупупуупупупупууппупупу
 
 class MainActivity : AppCompatActivity() {
 
