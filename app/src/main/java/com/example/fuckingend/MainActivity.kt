@@ -3,8 +3,10 @@ package com.example.fuckingend
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.InputType
 import android.view.View
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
@@ -51,11 +53,12 @@ class MainActivity : AppCompatActivity() {
         val login3 : TextView = findViewById(R.id.login3)
         val login4 : TextView = findViewById(R.id.login4)
         val pass1 : EditText = findViewById(R.id.pass1)
-        val pass2 : TextView = findViewById(R.id.pass2)
-        val pass3 : TextView = findViewById(R.id.pass3)
-        val pass4 : TextView = findViewById(R.id.pass4)
+        val pass2 : EditText = findViewById(R.id.pass2)
+        val pass3 : EditText = findViewById(R.id.pass3)
+        val pass4 : EditText = findViewById(R.id.pass4)
 
         menu() //Вызов функции всплывающего меню
+        showpassword()
 
         //Удаление (скрытие) паролей
         del1.setOnClickListener{
@@ -331,5 +334,52 @@ class MainActivity : AppCompatActivity() {
             }
         }
         icons.show()
+    }
+    //Чтобы в onCreate не писать несколько раз однотипный код я решил объединить все в одну функцию
+    //Функция показа/скрытия паролей с помощью checkbox
+    //Вид точек в else отличается от изначального, но думаю не сильно страшно
+    fun showpassword(){
+        val pass1 : EditText = findViewById(R.id.pass1)
+        val pass2 : EditText = findViewById(R.id.pass2)
+        val pass3 : EditText = findViewById(R.id.pass3)
+        val pass4 : EditText = findViewById(R.id.pass4)
+
+        val check1: CheckBox = findViewById(R.id.check1)
+        val check2: CheckBox = findViewById(R.id.check2)
+        val check3: CheckBox = findViewById(R.id.check3)
+        val check4: CheckBox = findViewById(R.id.check4)
+
+        check1.setOnClickListener {
+            if(check1.isChecked){
+                pass1.inputType = 1
+            }
+            else{
+                pass1.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+            }
+        }
+        check2.setOnClickListener {
+            if(check2.isChecked){
+                pass2.inputType = 1
+            }
+            else{
+                pass2.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+            }
+        }
+        check3.setOnClickListener {
+            if(check3.isChecked){
+                pass3.inputType = 1
+            }
+            else{
+                pass3.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+            }
+        }
+        check4.setOnClickListener {
+            if(check4.isChecked){
+                pass4.inputType = 1
+            }
+            else{
+                pass4.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+            }
+        }
     }
 }
